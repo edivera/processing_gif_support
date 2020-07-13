@@ -18,3 +18,21 @@ void draw() {
     // image(myGif, a, b, c, d, u1, v1, u2, v2);
 }
 ~~~
+
+#### Polymorphise with PImage using get()
+~~~
+PImage[] arr = new PImage[2];
+
+void setup() {
+    size(500, 250);
+    arr[0] = loadGifAsync("path/to/your.gif");
+    arr[1] = loadImage("path/to/your.png");
+    imageMode(CORNER);
+}
+
+void draw() {
+    for(int i = 0; i < 2; i++) {
+        image(arr[i].get(), i * 250, 0, 250, 250);
+    }
+}
+~~~
