@@ -1,4 +1,5 @@
 ## Tutorial
+#### The Basics
 ~~~
 Gif myGif;
 Gif myOtherGif;
@@ -36,3 +37,5 @@ void draw() {
     }
 }
 ~~~
+
+Please leave suggestions, improvements and bugs in the issues section.
