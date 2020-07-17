@@ -10,6 +10,10 @@ class GifLoader {
       // synchronous loading
       gif = new Gif(file);
     }
+    
+    if(acquiringImageFails(gif))
+      return gif;
+    
     createFrames(gif);
     loadFrames(gif);
     deleteFrames(gif);
@@ -17,6 +21,19 @@ class GifLoader {
     return gif;
   }
   
+  private boolean acquiringImageFails(Gif gif) {
+    PImage target = loadImage(gif.file);
+    if(target == null) {
+      println("Warning: GifLoader did not find your image. Check your URL or file path.");
+      return true;
+    }
+    
+    if(gif.file.startsWith("http")) {
+      return true;
+    }
+    
+    return false;
+  }
   private void createFrames(Gif gif) {
     StringList stdout = new StringList();
     StringList stderr = new StringList();
@@ -75,6 +92,8 @@ class GifLoader {
         break;
       }
     }
+    
+    ffmpegOutput.print();
     
     String frame = outputFrameLine.substring("frame=".length(), outputFrameLine.indexOf("fps"));
     // "    8 "
