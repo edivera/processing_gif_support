@@ -56,17 +56,19 @@ class Gif extends PImage implements Runnable {
 
 PImage sLoadingFrame;
 
-// API Additions
-void image(Gif gif, float a, float b) {
-  image(gif.get(), a, b);
+// API Modifications
+@Override
+void image(PImage img, float a, float b) {
+  super.image(img.get(), a, b);
 }
 
-void image(Gif gif, float a, float b, float c, float d) {
-  image(gif.get(), a, b, c, d);
+@Override
+void image(PImage img, float a, float b, float c, float d) {
+  super.image(img.get(), a, b, c, d);
 }
 
-void image(Gif gif,
-                  float a, float b, float c, float d,
-                  int u1, int v1, int u2, int v2) {
-  image(gif.get(), a, b, c, d, u1, v1, u2, v2);
+@Override
+void image(PImage img, float a, float b, float c, float d,
+           int u1, int v1, int u2, int v2) {
+  super.image(img.get(), a, b, c, d, u1, v1, u2, v2);
 }
