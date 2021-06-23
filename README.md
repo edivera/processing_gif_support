@@ -20,7 +20,7 @@ void draw() {
 }
 ~~~
 
-#### Polymorphise with PImage using get()
+#### Polymorphise with PImage
 ~~~
 PImage[] arr = new PImage[2];
 
@@ -33,7 +33,7 @@ void setup() {
 
 void draw() {
     for(int i = 0; i < 2; i++) {
-        image(arr[i].get(), i * 250, 0, 250, 250);
+        image(arr[i], i * 250, 0, 250, 250);
     }
 }
 ~~~
