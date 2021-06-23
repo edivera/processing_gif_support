@@ -1,3 +1,10 @@
+/**
+ * Adds gifs to processing that extend PImage. Gif's
+ * can be played using image just like PImage's and
+ * can be polymorphised with regular PImage's.
+ * @version 1.0alpha
+ * @see GifLoader
+ */
 class Gif extends PImage implements Runnable {
   public String file;
   public PImage[] frames;

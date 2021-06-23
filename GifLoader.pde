@@ -1,3 +1,8 @@
+/**
+ * Singleton gif loader used as a helper for the
+ * loadGif and loadGifAsync API's added at the bottom.
+ * @see Gif
+ */
 GifLoader SGifLoader = new GifLoader();
 
 class GifLoader {
