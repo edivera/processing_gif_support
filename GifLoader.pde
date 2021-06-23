@@ -28,10 +28,6 @@ class GifLoader {
       return true;
     }
     
-    if(gif.file.startsWith("http")) {
-      return true;
-    }
-    
     return false;
   }
   private void createFrames(Gif gif) {

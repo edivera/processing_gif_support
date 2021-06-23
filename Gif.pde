@@ -14,9 +14,9 @@ class Gif extends PImage implements Runnable {
   }
   public Gif(String _file) {
     this();
-    if(!_file.startsWith("http")) {
+    if(!_file.startsWith("http"))
       file = dataPath(_file);
-    }
+    else file = _file;
   }
   
   @Override
